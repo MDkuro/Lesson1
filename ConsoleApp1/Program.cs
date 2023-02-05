@@ -8,6 +8,8 @@ namespace ConsoleApp1
         {
             var consoleInput = int.Parse(Console.ReadLine());
             var consoleInput2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(Addition(consoleInput));
         }
 
         private static int CalcFactorial(int factor)
