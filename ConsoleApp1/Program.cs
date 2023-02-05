@@ -6,13 +6,11 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var consoleInput = Console.ReadLine();
-            if (!int.TryParse(consoleInput, out var intInput))
-            {
-                return;
-            }
+            var consoleInput = int.Parse(Console.ReadLine());
+            var consoleInput2 = int.Parse(Console.ReadLine());
+            
 
-            Console.WriteLine(Addition(intInput));
+            Console.WriteLine(ToSum(consoleInput, consoleInput2));
         }
 
         private static int CalcFactorial(int factor)
@@ -34,6 +32,13 @@ namespace ConsoleApp1
                 sum += i;
             }
 
+            return sum;
+        }
+
+        private static int ToSum(int number1, int number2)
+        {
+            var sum = 0;
+            sum = number1 + number2;
             return sum;
         }
     }
