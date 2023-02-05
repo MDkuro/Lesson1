@@ -13,6 +13,19 @@ namespace ConsoleApp1
             }
 
             Console.WriteLine(Addition(intInput));
+
+            consoleInput = Console.ReadLine();
+            if (!int.TryParse(consoleInput, out var subOperand1))
+            {
+                return;
+            }
+            consoleInput = Console.ReadLine();
+            if (!int.TryParse(consoleInput, out var subOperand2))
+            {
+                return;
+            }
+            
+            Console.WriteLine(Addition(subOperand1 + subOperand2));
         }
 
         private static int CalcFactorial(int factor)
