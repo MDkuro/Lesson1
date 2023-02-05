@@ -12,7 +12,7 @@ namespace ConsoleApp1
                 return;
             }
 
-            Console.WriteLine(CalcFactorial(intInput));
+            Console.WriteLine(Addition(intInput));
         }
 
         private static int CalcFactorial(int factor)
@@ -21,6 +21,17 @@ namespace ConsoleApp1
             for (int number = 2; number <= factor; number++)
             {
                 sum *= number;
+            }
+
+            return sum;
+        }
+
+        private static int Addition(int addition)
+        {
+            var sum = 0;
+            for(int i = 0;i < addition; i++)
+            {
+                sum += i;
             }
 
             return sum;
