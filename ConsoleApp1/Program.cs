@@ -11,6 +11,7 @@ namespace ConsoleApp1
             
 
             Console.WriteLine(ToSum(consoleInput, consoleInput2));
+            
         }
 
         private static int CalcFactorial(int factor)
