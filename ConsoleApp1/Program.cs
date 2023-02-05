@@ -6,7 +6,24 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var consoleInput = Console.ReadLine();
+            if (!int.TryParse(consoleInput, out var intInput))
+            {
+                return;
+            }
+
+            Console.WriteLine(CalcFactorial(intInput));
+        }
+
+        private static int CalcFactorial(int factor)
+        {
+            var sum = 1;
+            for (int number = 2; number <= factor; number++)
+            {
+                sum *= number;
+            }
+
+            return sum;
         }
     }
 }
